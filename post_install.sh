@@ -18,6 +18,10 @@ echo "$PASS" | pw mod user root -h 0
 
 echo "Root Password: $PASS"
 
+# Linux Java is a tad broke, fix it
+sed -i '' 's|/usr/bin/cpuset|export LD_LIBRARY_PATH="/usr/local/linux-oracle-jdk1.8.0/jre/lib/i386/jli"; /usr/bin/cpuset|g' \
+	/usr/local/etc/rc.d/crashplan
+
 service sshd keygen
 service sshd start
 service crashplan start
