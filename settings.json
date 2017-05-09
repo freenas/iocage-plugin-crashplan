@@ -1,0 +1,13 @@
+{
+	"servicerestart":"service nginx restart",
+	"serviceget": "/usr/local/bin/pluginget",
+	"serviceset": "/usr/local/bin/pluginset",
+	"options": {
+		"rootpassword": {
+			"type": "string",
+			"name": "SSH Password",
+			"description": "SSH password for root user access to CrashPlan Plugin",
+			"readonly": true
+		}
+	}
+}

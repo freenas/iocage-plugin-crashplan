@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Very simple script to return the default passwords created for the database
+case $1 in
+	dbpassword) cat /root/dbpassword ;;
+esac
