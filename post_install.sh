@@ -24,5 +24,5 @@ sed -i '' 's|/usr/bin/cpuset|export LD_LIBRARY_PATH="/usr/local/linux-oracle-jdk
 
 service sshd keygen
 service sshd start
-sleep 2
 service crashplan start
+service crashplan start 2>/dev/null >/dev/null
