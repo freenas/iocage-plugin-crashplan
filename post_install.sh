@@ -16,7 +16,7 @@ cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1 > /root/dbpasswor
 PASS=`cat /root/dbpassword`
 echo "$PASS" | pw mod user root -h 0
 
-echo "Root Password: $PASS"
+echo "Root Password: $PASS" > /root/PLUGIN_INFO
 
 # Linux Java is a tad broke, fix it
 sed -i '' 's|/usr/bin/cpuset|export LD_LIBRARY_PATH="/usr/local/linux-oracle-jdk1.8.0/jre/lib/i386/jli"; /usr/bin/cpuset|g' \
